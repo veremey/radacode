@@ -1,0 +1,130 @@
+// Normally header styles
+.header
+	+clr
+	&__wrap
+		max-width: $max-width
+		margin: 0 auto
+		padding: 5rem 2rem 0
+		+r(760)
+			padding-top: 2rem
+	&__logo
+		float: left
+		height: 4.5rem
+		span
+			vertical-align: top
+			font-size: 2.8rem
+			line-height: 4.5rem
+			color: $black
+			+b
+		img
+			height: 45px
+			margin-right: 1rem
+		&:hover
+			opacity: 0.8
+	nav
+		float: right
+		// +r(760)
+			// float: none
+			// position: fixed
+			// top: 0
+			// bottom: 0
+			// left: 0
+			// right: 0
+			// background-color: $darkgreen
+			// z-index: 10
+	&__list
+		display: flex
+		-webkit-justify-content: space-between
+		justify-content: space-between
+		width: 50rem
+		height: 45px
+		font-size: 0
+		+r(900)
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			text-align: center
+			width: auto
+			height: auto
+		&.opened
+			float: none
+			position: fixed
+			z-index: 10
+
+
+	&__item
+		display: inline-block
+		height: 45px
+		+r(900)
+			display: block
+			margin-bottom: 30px
+			height: auto
+
+	&__link
+		font-size: 1.8rem
+		line-height: 45px
+		color: #020302
+		+osl
+		+r(900)
+			color: #fff
+			font-size: 3.2rem
+	&_btn
+		display: inline-block
+		width: 14rem
+		height: 45px
+		line-height: 42px
+		border: 3px solid #000
+		text-align: center
+		+tr(.3s)
+		&:hover
+			background-color: #000
+			color: #FFF
+		+r(900)
+			line-height: 63px
+			border-color: #FFF
+			width: auto
+			height: auto
+			padding: 0 30px
+.mob_wraper
+	+r(900)
+		float: none
+		&.opened
+			position: fixed
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: $darkgreen
+			z-index: 10
+.toggler
+	position: absolute
+	top: 50px
+	right: 20px
+	height: 40px
+	width: 40px
+	cursor: pointer
+	+tr(.4s)
+	display: none
+	+r(900)
+		display: block
+	+r(760)
+		top: 20px
+	&:hover
+		opacity: 0.6
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		height: 50%
+	&:before
+		top: 0
+		border-top: 4px solid #fff
+		border-bottom: 2px solid #fff
+	&:after
+		top: 50%
+		border-top: 2px solid #fff
+		border-bottom: 4px solid #fff

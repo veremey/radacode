@@ -1,0 +1,64 @@
+// Normally footer styles
+
+.footer
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	height: 175px
+	text-align: center
+	+r(760)
+		height: 258px
+	&__info
+		max-width: 64rem
+		padding-top: 44px
+		margin: 0 auto
+		+r(760)
+			padding-top: 0
+	&__link
+		display: inline-block
+		vertical-align: top
+		line-height: 48px
+		font-size: 1.8rem
+		margin-right: 60px
+		font-size: 20px
+		color: #000
+		line-height: 48px
+		+osl
+		+r(760)
+			display: block
+			margin-right: 0
+			margin-bottom: 20px
+			font-size: 26px
+	&__license
+		padding: 48px 0 10px
+		+r(760)
+			padding-top: 20px
+	&__copy
+		font-size: 18px
+.socio
+	display: inline-block
+	vertical-align: top
+	+r(760)
+		display: block
+		.footer__link
+			display: inline-block
+			margin-right: 40px
+			&:last-child
+				margin-right: 0
+.share__icon
+	width: 46px
+	height: 46px
+	display: inline-block
+	vertical-align: top
+	-webkit-border-radius: 50%
+	border-radius: 50%
+	overflow: hidden
+	&:hover
+		opacity: 0.6
+.icon-facebook
+	background-image: url("../img/icon-facebook.png")
+.icon-g
+	background-image: url("../img/icon-g.png")
+.icon-tw
+	background-image: url("../img/icon-tw.png")

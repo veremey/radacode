@@ -1,0 +1,204 @@
+.startscreen
+	position: relative
+	max-width: $max-width
+	margin: 40px auto 0
+	+clr
+	+r(900)
+		text-align: center
+	&_wrap
+		position: relative
+		z-index: 5
+		+r(760)
+			padding: 0 10px
+	&__fiqure
+		display: inline-block
+		vertical-align: top
+		margin-left: 66px
+		margin-bottom: 16px
+		+r(900)
+			margin-left: 0
+		img
+			max-width: 100%
+		figcaption
+			text-align: right
+			margin-right: -17px
+			font-size: 18px
+			color: #030000
+			+r(760)
+				margin-right: 0
+	&__title
+		font-size: 3.6rem
+		color: #000
+		margin-bottom: 1.25em
+		text-indent: 10.6rem
+		+r(900)
+			text-indent: 0
+	&__desc
+		text-align: center
+		font-size: 22px
+		color: #010000
+		margin: 0 60px 0 20px
+		+r(900)
+			margin-right: 20px
+.legs
+	position: absolute
+	top: 53px
+	bottom: 0
+	right: 0
+	width: 38rem
+	z-index: 1
+	+r(900)
+		display: none
+
+.leg
+	position: absolute
+	width: 58px
+	height: 50px
+	background-image: url("../img/leg.png")
+	-webkit-background-size: 58px 50px
+	-o-background-size: 58px 50px
+	background-size: 58px 50px
+	opacity: 0
+	&-01
+		top: 3.4rem
+		left: 0
+	&-02
+		top: 0
+		left: 9rem
+	&-03
+		top: 4rem
+		left: 20rem
+		+rotate(30)
+	&-04
+		top: 8.4rem
+		left: 29rem
+		+rotate(50)
+	&-05
+		top: 17.4rem
+		left: 31.7rem
+		+rotate(80)
+	&-06
+		bottom: 0
+		left: 31.7rem
+		+rotate(100)
+
+.skew
+	position: relative
+	background-color: #FFF
+	margin: 90px 0 58px
+	&__border
+		position: absolute
+		top: -58px
+		left: 0
+		right: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			width: 0px
+			height: 0px
+			border-style: solid
+			// +arr(100vw, 116px, #fff, l)
+			border-width: 58px 50vw 58px  0
+			border-color: transparent #fff transparent transparent
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 0px
+			height: 0px
+			border-style: solid
+			// +arr(100vw, 116px, #fff, l)
+			border-width: 58px 0 58px 50vw
+			border-color: transparent transparent transparent #fff
+		&.mod_bottom
+			top: auto
+			bottom: 58px
+	&__box
+		position: relative
+		text-align: center
+		padding: 48px 0 40px
+		background-color: #f2f9f6
+		&:not(:last-child)
+			margin-bottom: 23px
+		&_wrap
+			height: 180px
+			text-align: center
+	&__column
+		position: relative
+		display: flex
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		-webkit-justify-content: center
+		justify-content: center
+		width: 50%
+		min-height: 180px
+		float: left
+		vertical-align: top
+		+r(900)
+			padding: 0 10px
+		+r(760)
+			width: 100%
+			display: block
+
+		&.mod_widest
+			width: 55%
+			z-index: 1
+			+r(760)
+				width: 100%
+				margin-bottom: 30px
+		&.mod_spin
+			margin-left: -5%
+			+r(760)
+				width: 100%
+				margin-left: 0
+	&__title
+		font-size: 34px
+		+osl
+		color: #000
+	&__desc
+		font-size: 23px
+		+osl
+		color: #000
+	&__logo
+		height: 92px
+		line-height: 180px
+		margin: 0 auto
+		// float: left
+		img
+			height: 92px
+			margin-right: 20px
+		span
+			font-size: 59px
+			vertical-align: top
+			line-height: 92px
+			color: #020302
+			+osl
+			+r(350)
+				font-size: 52px
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		max-width: 100%
+		+r(760)
+			position: relative
+			top: 0
+			left: 0
+			transform: translate(0%, 0%)
+	&__btn
+		display: inline-block
+		height: 60px
+		padding: 0 26px
+		font-size: 30px
+		color: #000
+		background-color: #007b4e
+		line-height: 60px
+		+osl
+		+tr(.3s)
+		&:hover
+			color: #fff

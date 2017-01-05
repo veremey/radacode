@@ -1,0 +1,84 @@
++font('Biko_Regular', 'Biko_Regular')
++font('OpenSansRegular', 'OpenSansRegular')
++font('OpenSansLight', 'OpenSansLight')
+
+=b
+	font-family: 'Biko_Regular', Arial, sans-serif
+	font-weight: normal
+
+=osl
+	font-family: 'OpenSansLight', Arial, sans-serif
+	font-weight: normal
+
+=os
+	font-family: 'OpenSansRegular', Arial, sans-serif
+	font-weight: normal
+
+
+// colors
+$n: transparent
+$darkgreen: #004a31
+$black: #020302
+
+
+// size
+$max-width: 96rem
+
+a
+	text-decoration: none
+	&:hover
+		opacity: .8
+
+
+html
+	font-size: 62.5%
+body
+	min-width: 30rem
+	font-size: 2rem
+	line-height: 1.22
+	+osl
+
+// common blocks
+
+.out
+	position: relative
+	min-height: 100vh
+	background-image: url("../img/bg.jpg")
+	-webkit-background-size: 100% 100%
+	-o-background-size: 100% 100%
+	background-size: 100% 100%
+	background-repeat-x: repeat
+	padding-bottom: 175px
+	+clr
+	+r(760)
+		padding-bottom: 258px
+
+.layout
+	max-width: $max-width
+	position: relative
+	margin: 0 auto
+	display: flex
+	-webkit-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+	flex-wrap: wrap
+	+clr
+	&__small
+		max-width: 73.5rem
+		margin: 0 auto
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
